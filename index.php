@@ -68,11 +68,11 @@ include("conexion.php");
 			<div class="table-responsive">
 			<table class="table table-striped table-hover">
 				<tr>
-                   <th>No</th>
+                   
                    <th>Fecha</th>
 				   <th>Nombre de Dominio</th>
 			       <th>Owner</th>
-                   <th>Custodio de Información</th>
+                               <th>Custodio de Información</th>
 			       <th>ED identificados</th>
 			       <th>EDC identificados</th>
 			       <th>EDC en el Catalog</th>
@@ -97,7 +97,7 @@ include("conexion.php");
 					while($row = pg_fetch_assoc($result)){
 						echo '
 						<tr>
-							<td>'.$no.'</td>
+						
 							<td>'.$row['fecactual'].'</td>
 							<td>'.$row['nombredominio'].'</td>
 							<td>'.$row['owner'].'</td>
