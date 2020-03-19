@@ -31,7 +31,6 @@
               <td><?php echo $row['owner']; ?></td>
               <td><?php echo $row['nombreusuario']; ?></td>
               <td><?php echo $row['numedident']; ?></td>
-              <td><?php echo $row['numedcident']; ?></td>
               <td><?php echo $row['edccatalog']; ?></td>
               <td><?php echo $row['ednccatalog']; ?></td>
               <td><?php echo $row['rndefinidas']; ?>/td>
