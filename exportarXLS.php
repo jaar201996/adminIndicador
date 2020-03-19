@@ -33,7 +33,7 @@
               <td><?php echo $row['numedident']; ?></td>
               <td><?php echo $row['edccatalog']; ?></td>
               <td><?php echo $row['ednccatalog']; ?></td>
-              <td><?php echo $row['rndefinidas']; ?>/td>
+              <td><?php echo $row['rndefinidas']; ?></td>
               <td><?php echo $row['rnimplactejec']; ?></td>
               <td><?php echo $row['rndesact']; ?></td>
               <td><?php echo $row['edtrazacatalog']; ?></td>
