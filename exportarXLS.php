@@ -26,19 +26,19 @@
            while($row = pg_fetch_assoc($sql)){
         ?>
         <tr>
-              <td>'.$row['fecactual'].'</td>
-              <td>'.$row['nombredominio'].'</td>
-              <td>'.$row['owner'].'</td>
-              <td>'.$row['nombreusuario'].'</td>
-              <td>'.$row['numedident'].'</td>
-              <td>'.$row['numedcident'].'</td>
-              <td>'.$row['edccatalog'].'</td>
-              <td>'.$row['ednccatalog'].'</td>
-              <td>'.$row['rndefinidas'].'</td>
-              <td>'.$row['rnimplactejec'].'</td>
-              <td>'.$row['rndesact'].'</td>
-              <td>'.$row['edtrazacatalog'].'</td>
-              <td>'.$row['edtrazafueracatalog'].'</td>
+              <td><?php echo $row['fecactual']; ?></td>
+              <td><?php echo $row['nombredominio']; ?></td>
+              <td><?php echo $row['owner']; ?></td>
+              <td><?php echo $row['nombreusuario']; ?></td>
+              <td><?php echo $row['numedident']; ?></td>
+              <td><?php echo $row['numedcident']; ?></td>
+              <td><?php echo $row['edccatalog']; ?></td>
+              <td><?php echo $row['ednccatalog']; ?></td>
+              <td><?php echo $row['rndefinidas']; ?>/td>
+              <td><?php echo $row['rnimplactejec']; ?></td>
+              <td><?php echo $row['rndesact']; ?></td>
+              <td><?php echo $row['edtrazacatalog']; ?></td>
+              <td><?php echo $row['edtrazafueracatalog']; ?></td>
         </tr> 
         <?php
           }
