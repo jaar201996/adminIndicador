@@ -118,6 +118,7 @@ include("conexion.php");
 				}
 				?>
 			</table>
+		         <a class="btn btn-success" href="exportarXLS.php">Exportar a Excel</a>
 			</div>
 		</div>
 	</div><center>
