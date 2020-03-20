@@ -20,10 +20,10 @@ include("exportarXLS.php");
 
 	<style>
 		.content {
-			margin-top: 80px;
+			margin-top: 40px;
 		}
 		#div1 {
-	            margin-left: 50px;
+	            margin-left: 25px;
                     overflow:scroll;
      		    height:500px;
      		    width:1200px;
