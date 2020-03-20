@@ -68,7 +68,7 @@
 					</tr>';
 		  }
 	    }else{
-	       echo '<tr><td colspan="8">No hay datos.</td></tr>';
+	       echo '<tr><td colspan="8">No hay datos con filtro.</td></tr>';
 	    }
   }
 ?>
