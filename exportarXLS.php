@@ -1,16 +1,8 @@
-<?php
-  header('Content-type:application/xls');
-  header('Content-Disposition: attachment; filename=usuarios.xls');
-  include("conexion.php");
-  $sql = pg_query($dbconn, "SELECT a.*, b.nombreusuario,c.* from dominio  a join usuario b on a.codusuario = b.codusuario join indicador c on a.coddominio = c.coddominio order by c.fecactual");
-?>
-
-
 <table order="1">
         <tr>
              <th>Fecha</th>
              <th>Owner</th>
-             <th>Custodio de Informacion</th>
+             <th>Custodio de Información</th>
              <th>ED identificados</th>
              <th>EDC identificados</th>
              <th>EDC en el Catalog</th>
@@ -22,24 +14,62 @@
              <th>ED con Traza en el Catalog</th>
 
         </tr>
-        <?php
-           while($row = pg_fetch_assoc($sql)){
-        ?>
-        <tr>
-              <td><?php echo $row['fecactual']; ?></td>
-              <td><?php echo $row['nombredominio']; ?></td>
-              <td><?php echo $row['owner']; ?></td>
-              <td><?php echo $row['nombreusuario']; ?></td>
-              <td><?php echo $row['numedident']; ?></td>
-              <td><?php echo $row['edccatalog']; ?></td>
-              <td><?php echo $row['ednccatalog']; ?></td>
-              <td><?php echo $row['rndefinidas']; ?></td>
-              <td><?php echo $row['rnimplactejec']; ?></td>
-              <td><?php echo $row['rndesact']; ?></td>
-              <td><?php echo $row['edtrazacatalog']; ?></td>
-              <td><?php echo $row['edtrazafueracatalog']; ?></td>
-        </tr> 
-        <?php
-          }
-        ?>
+<?php
+  header('Content-type:application/xls');
+  header('Content-Disposition: attachment; filename=usuarios.xls');
+  include("conexion.php");
+  $date1 = date("Y-m-d", strtotime($_POST['date1']));
+  if(is_null($date1)){
+      $result = pg_query($dbconn, "SELECT a.*, b.nombreusuario,c.* from dominio  a join usuario b on a.codusuario = b.codusuario join indicador c on a.coddominio = c.coddominio order by c.fecactual");
+      if(pg_num_rows ($result)>0){
+        while($row = pg_fetch_assoc($result)){
+		  echo '
+				<tr>
+								
+					<td>'.$row['fecactual'].'</td>
+				    <td>'.$row['nombredominio'].'</td>
+					<td>'.$row['owner'].'</td>
+					<td>'.$row['nombreusuario'].'</td>
+					<td>'.$row['numedident'].'</td>
+					<td>'.$row['numedcident'].'</td>
+					<td>'.$row['edccatalog'].'</td>
+					<td>'.$row['ednccatalog'].'</td>
+					<td>'.$row['rndefinidas'].'</td>
+					<td>'.$row['rnimplactejec'].'</td>
+					<td>'.$row['rndesact'].'</td>
+					<td>'.$row['edtrazacatalog'].'</td>
+				    <td>'.$row['edtrazafueracatalog'].'</td>
+				</tr>';
+        	}
+	    }else{
+	       echo '<tr><td colspan="8">No hay datos.</td></tr>';
+	    }
+
+  }else{
+  	 $result = pg_query($dbconn, "SELECT a.*, b.nombreusuario,c.* from dominio  a join usuario b on a.codusuario = b.codusuario join indicador c on a.coddominio = c.coddominio where c.fecactual='$date1' order by c.fecactual");
+	  if(pg_num_rows ($result)>0){
+	      while($row = pg_fetch_assoc($result)){
+			  echo '
+					<tr>
+									
+						<td>'.$row['fecactual'].'</td>
+					    <td>'.$row['nombredominio'].'</td>
+						<td>'.$row['owner'].'</td>
+						<td>'.$row['nombreusuario'].'</td>
+						<td>'.$row['numedident'].'</td>
+						<td>'.$row['numedcident'].'</td>
+						<td>'.$row['edccatalog'].'</td>
+						<td>'.$row['ednccatalog'].'</td>
+						<td>'.$row['rndefinidas'].'</td>
+						<td>'.$row['rnimplactejec'].'</td>
+						<td>'.$row['rndesact'].'</td>
+						<td>'.$row['edtrazacatalog'].'</td>
+					    <td>'.$row['edtrazafueracatalog'].'</td>
+					</tr>';
+		  }
+	    }else{
+	       echo '<tr><td colspan="8">No hay datos.</td></tr>';
+	    }
+  }
+?>
 </table>
