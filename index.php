@@ -1,5 +1,6 @@
 <?php
 include("conexion.php");
+include("<?php include'exportarXLS.php'?>");	
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -114,9 +115,10 @@ include("conexion.php");
   }
 ?>
 			</table>
-		        <form class="form-inline" method="POST" action="">
-			      <a class="btn btn-success" href="exportarXLS.php">Exportar a Excel</a>				
-			</form>
+		       
+			<form class="form-inline" method="POST" action="">
+			      <button class="btn btn-success" name="enviar"><span class="glyphicon glyphicon-export">Exportar a Excel</span></button> 
+			 </form>
 			</div>
 		</div>
 	</div><center>
