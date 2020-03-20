@@ -117,7 +117,7 @@ include("<?php include'exportarXLS.php'?>");
 			</table>
 		       
 			<form class="form-inline" method="POST" action="">
-			      <button class="btn btn-success" name="enviar"><span class="glyphicon glyphicon-export">Exportar a Excel</span></button> 
+			      <button class="btn btn-success" name="enviar"><span>Exportar a Excel</span></button> 
 			 </form>
 			</div>
 		</div>
