@@ -16,7 +16,7 @@
         </tr>
 <?php
   header('Content-type:application/xls');
-  header('Content-Disposition: attachment; filename=usuarios.xls');
+  header('Content-Disposition: attachment; filename=dominio.xlsx');
   include("conexion.php");
   $date1 = date("Y-m-d", strtotime($_POST['date1']));
   if(is_null($date1)){
