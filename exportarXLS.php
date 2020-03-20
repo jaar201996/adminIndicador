@@ -10,7 +10,7 @@
         <tr>
              <th>Fecha</th>
              <th>Owner</th>
-             <th>Custodio de Información</th>
+             <th>Custodio de Informacion</th>
              <th>ED identificados</th>
              <th>EDC identificados</th>
              <th>EDC en el Catalog</th>
