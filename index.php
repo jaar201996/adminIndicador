@@ -40,6 +40,7 @@ include("exportarXLS.php");
 			      <input type="date" class="form-control" placeholder="Start"  name="date1"/>
 			      <button class="btn btn-primary" name="search"><span class="glyphicon glyphicon-search"></span></button>
 			</form>
+			<br/>
 			<div class="table-responsive" id="div1">
 			<table class="table table-striped table-hover">
 				<tr>                   
