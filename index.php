@@ -38,6 +38,7 @@ include("conexion.php");
 			      <label>Fecha:</label>
 			      <input type="date" class="form-control" placeholder="Start"  name="date1"/>
 			      <button class="btn btn-primary" name="search"><span class="glyphicon glyphicon-search"></span></button>
+			        <button class="btn btn-success" name="enviar"><span>Exportar a Excel</span></button> 
 			</form>
 			<br/>
 			<div class="table-responsive" id="div1">
@@ -162,9 +163,6 @@ include("conexion.php");
 ?>
 			</table>
 		       
-			<form class="form-inline" method="POST" action="">
-			      <button class="btn btn-success" name="enviar"><span>Exportar a Excel</span></button> 
-			 </form>
 			</div>
 		</div>
 	</div><center>
