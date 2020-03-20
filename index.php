@@ -26,7 +26,7 @@ include("exportarXLS.php");
 	            margin-left: 50px;
                     overflow:scroll;
      		    height:500px;
-     		    width:800px;
+     		    width:1200px;
                }
 	</style>
 
@@ -42,7 +42,7 @@ include("exportarXLS.php");
 			      <label>Fecha:</label>
 			      <input type="date" class="form-control" placeholder="Start"  name="date1"/>
 			      <button class="btn btn-primary" name="search"><span class="glyphicon glyphicon-search"></span></button>
-			/form>
+			</form>
 			<div class="table-responsive" id="div1">
 			<table class="table table-striped table-hover">
 				<tr>                   
