@@ -33,37 +33,13 @@ include("conexion.php");
 		<div class="content">
 			<h2>Lista de dominios</h2>
 			<hr />
-			<form class="form-inline" method="get">
-				<div class="form-group">
-					<select name="filter" class="form-control" onchange="form.submit()">
-						<option value="0">Seleccionar dominio</option>
-						<?php $filter = (isset($_GET['filter']) ? strtolower($_GET['filter']) : NULL);  ?>
-						<option value="6" <?php if($filter == 'ADR'){ echo 'selected'; } ?>>ADR</option>
-						<option value="2" <?php if($filter == 'ALM'){ echo 'selected'; } ?>>ALM</option>
-						<option value="23" <?php if($filter == 'Anallytics'){ echo 'selected'; } ?>>Anallytics</option>
-						<option value="12" <?php if($filter == 'Canales Digitales para Empresas'){ echo 'selected'; } ?>>Canales Digitales para Empresas</optio>
-						<option value="10" <?php if($filter == 'Cliente Persona Natural'){ echo 'selected'; } ?>>Cliente Persona Natural</option>
-                        <option value="9" <?php if($filter == 'Clientes Mayorista'){ echo 'selected'; } ?>>Clientes Mayorista</option>
-						<option value="21" <?php if($filter == 'Colaboradores'){ echo 'selected'; } ?>>Colaboradores</option>
-                        <option value="22" <?php if($filter == 'Contabilidad'){ echo 'selected'; } ?>>Contabilidad</option>
-                        <option value="20" <?php if($filter == 'CRM'){ echo 'selected'; } ?>>CRM</option>
-                        <option value="13" <?php if($filter == 'Cuentas Corrientes'){ echo 'selected'; } ?>>Cuentas Corrientes</option>
-                        <option value="5" <?php if($filter == 'Depositos Minoristas'){ echo 'selected'; } ?>>Depositos Minoristas</option>
-                       	<option value="4" <?php if($filter == 'Digitalidad'){ echo 'selected'; } ?>>Digitalidad</option>
-                        <option value="17" <?php if($filter == 'Discovery'){ echo 'selected'; } ?>>Discovery</option>
-						<option value="8" <?php if($filter == 'Finanzas'){ echo 'selected'; } ?>>Finanzas</option>
-						<option value="16" <?php if($filter == 'Hipotecarios'){ echo 'selected'; } ?>>Hipotecarios</option>
-						<option value="15" <?php if($filter == 'Planeamiento Minorista'){ echo 'selected'; } ?>>Planeamiento Minorista</option>
-						<option value="14" <?php if($filter == 'Productos Crediticios para Empresas'){ echo 'selected'; } ?>>Productos Crediticios para Empresas</option>
-						<option value="11" <?php if($filter == 'Productos Transaccionales para Empresas'){ echo 'selected'; } ?>>Productos Transaccionales para Empresas</option>
-						<option value="7" <?php if($filter == 'Riesgos de Tesorería'){ echo 'selected'; } ?>>Riesgos de Tesorería</option>
-						<option value="18" <?php if($filter == 'Seguros'){ echo 'selected'; } ?>>Seguros</option>
-						<option value="3" <?php if($filter == 'Tarjetas'){ echo 'selected'; } ?>>Tarjetas</option>
-						<option value="1" <?php if($filter == 'Tesoreria'){ echo 'selected'; } ?>>Tesoreria</option>
-						<option value="19" <?php if($filter == 'Vehiculares'){ echo 'selected'; } ?>>Vehiculares</option>	
-					</select>
-				</div>
-			</form>
+			<form class="form-inline" method="POST" action="">
+			      <label>Fecha Desde:</label>
+			      <input type="date" class="form-control" placeholder="Start"  name="date1"/>
+			      <label>Hasta</label>
+			      <input type="date" class="form-control" placeholder="End"  name="date2"/>
+			      <button class="btn btn-primary" name="search"><span class="glyphicon glyphicon-search"></span></button> <a href="index.php" type="button" class="btn btn-success"><span class = "glyphicon glyphicon-refresh"><span></a>
+		       </form>
 			<br />
 			<div class="table-responsive">
 			<table class="table table-striped table-hover">
