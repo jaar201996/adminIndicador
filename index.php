@@ -33,11 +33,7 @@ include("conexion.php");
 		<div class="content">
 			<h2>Lista de dominios</h2>
 			<hr />
-			<form class="form-inline" method="POST" action="">
-			      <label>Fecha Desde:</label>
-			      <input type="date" class="form-control" placeholder="Start"  name="date1"/>
-			      <button class="btn btn-primary" name="search"><span class="glyphicon glyphicon-search"></span></button> <a href="index.php" type="button" class="btn btn-success">
-		       </form>
+			
 			<br />
 			<div class="table-responsive">
 			<table class="table table-striped table-hover">
