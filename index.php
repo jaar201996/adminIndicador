@@ -1,6 +1,6 @@
 <?php
 include("conexion.php");
-include("include'exportarXLS.php'");	
+include("exportarXLS.php");	
 ?>
 <!DOCTYPE html>
 <html lang="es">
