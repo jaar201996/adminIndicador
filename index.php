@@ -114,7 +114,9 @@ include("conexion.php");
   }
 ?>
 			</table>
-		         <a class="btn btn-success" href="exportarXLS.php">Exportar a Excel</a>
+		        <form class="form-inline" method="POST" action="">
+			      <a class="btn btn-success" href="exportarXLS.php">Exportar a Excel</a>				
+			</form>
 			</div>
 		</div>
 	</div><center>
