@@ -38,7 +38,6 @@ include("conexion.php");
 			      <label>Fecha:</label>
 			      <input type="date" class="form-control" placeholder="Start"  name="date1"/>
 			      <button class="btn btn-primary" name="search"><span class="glyphicon glyphicon-search"></span></button>
-      			      <button class="btn btn-success" name="enviar"><span>Exportar a Excel</span></button> 
 			</form>
 			<br/>
 			<div class="table-responsive" id="div1">
@@ -84,8 +83,30 @@ include("conexion.php");
 				</tr>';
                  }
             }else{
+                     $result = pg_query($dbconn, "SELECT a.*, b.nombreusuario,c.* from dominio  a join usuario b on a.codusuario = b.codusuario join indicador c on a.coddominio = c.coddominio order by c.fecactual");
+        if(pg_num_rows ($result)>0){
+	      while($row = pg_fetch_assoc($result)){
+			  echo '
+				<tr>			
+			                <td>'.$row['fecactual'].'</td>
+				        <td>'.$row['nombredominio'].'</td>
+					<td>'.$row['owner'].'</td>
+					<td>'.$row['nombreusuario'].'</td>
+					<td>'.$row['numedident'].'</td>
+					<td>'.$row['numedcident'].'</td>
+					<td>'.$row['edccatalog'].'</td>
+					<td>'.$row['ednccatalog'].'</td>
+					<td>'.$row['rndefinidas'].'</td>
+					<td>'.$row['rnimplactejec'].'</td>
+					<td>'.$row['rndesact'].'</td>
+					<td>'.$row['edtrazacatalog'].'</td>
+				    <td>'.$row['edtrazafueracatalog'].'</td>
+				</tr>';
+                 }
+            }else{
                echo '<tr><td colspan="8">No hay datos.</td></tr>';
            }
+	    }
       }
 
 	  if(ISSET($_POST['search'])){
