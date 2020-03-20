@@ -5,7 +5,7 @@
 	  include("conexion.php");
 	  $date1 = date("Y-m-d", strtotime($_POST['date1']));
 	  if('$date1'=='aaaa/mm/dd'){
-	      $result = pg_query($dbconn, "SELECT a.*, b.nombreusuario,c.* from dominio  a join usuario b on a.codusuario = b.codusuario join indicador c on a.coddominio = c.coddominio order by c.fecactual");
+	      $result = pg_query($dbconn, "SELECT a.*, b.nombreusuario,c.* from dominio  a join usuario b on a.codusuario = b.codusuario join indicador c on a.coddominio = c.coddominio where c.fecactual='$date1' order by c.fecactual");
 	      if(pg_num_rows ($result)>0){
 	        while($row = pg_fetch_assoc($result)){
 			  echo '
