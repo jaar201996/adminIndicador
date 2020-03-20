@@ -38,7 +38,6 @@ include("exportarXLS.php");
 	</nav>
 	<div class="container">
 		<div class="content">
-			<h2>Lista de dominios</h2>
 		        <form class="form-inline" method="POST" action="">
 			      <label>Fecha:</label>
 			      <input type="date" class="form-control" placeholder="Start"  name="date1"/>
