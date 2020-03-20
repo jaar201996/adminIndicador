@@ -61,9 +61,12 @@ include("exportarXLS.php");
 				</tr>
 	<?php
 	  if(ISSET($_POST['search'])){
+            
 	    $date1 = date("Y-m-d", strtotime($_POST['date1']));
 	    $result = pg_query($dbconn, "SELECT a.*, b.nombreusuario,c.* from dominio  a join usuario b on a.codusuario = b.codusuario join indicador c on a.coddominio = c.coddominio where c.fecactual='$date1' order by c.fecactual");
 	    if(pg_num_rows ($result)>0){
+	        header('Content-type:application/xls');
+	        header('Content-Disposition: attachment; filename=dominio.xls');
 	      while($row = pg_fetch_assoc($result)){
 			  echo '
 				<tr>			
