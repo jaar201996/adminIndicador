@@ -23,7 +23,6 @@ include("exportarXLS.php");
 			margin-top: 40px;
 		}
 		#div1 {
-	            margin-left: 25px;
                     overflow:scroll;
      		    height:500px;
      		    width:1200px;
