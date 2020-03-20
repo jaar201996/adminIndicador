@@ -36,9 +36,7 @@ include("conexion.php");
 			<form class="form-inline" method="POST" action="">
 			      <label>Fecha Desde:</label>
 			      <input type="date" class="form-control" placeholder="Start"  name="date1"/>
-			      <label>Hasta</label>
-			      <input type="date" class="form-control" placeholder="End"  name="date2"/>
-			      <button class="btn btn-primary" name="search"><span class="glyphicon glyphicon-search"></span></button> <a href="index.php" type="button" class="btn btn-success"><span class = "glyphicon glyphicon-refresh"><span></a>
+			      <button class="btn btn-primary" name="search"><span class="glyphicon glyphicon-search"></span></button> <a href="index.php" type="button" class="btn btn-success">
 		       </form>
 			<br />
 			<div class="table-responsive">
