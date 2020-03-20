@@ -21,6 +21,12 @@ include("conexion.php");
 		.content {
 			margin-top: 80px;
 		}
+		#div1 {
+	            margin-left: 50px;
+                    overflow:scroll;
+     		    height:500px;
+     		    width:1000px;
+               }
 	</style>
 
 
@@ -39,7 +45,7 @@ include("conexion.php");
 			      <button class="btn btn-primary" name="search"><span class="glyphicon glyphicon-search"></span></button>
 			  </form>
 			<br />
-			<div class="table-responsive">
+			<div class="table-responsive" id="">div1
 			<table class="table table-striped table-hover">
 				<tr>
                    
