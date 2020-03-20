@@ -17,7 +17,7 @@
 <?php
    if(ISSET($_POST['enviar'])){
       header('Content-type:application/xls');
-	  header('Content-Disposition: attachment; filename=dominio.xlsx');
+	  header('Content-Disposition: attachment; filename=dominio.xls');
 	  include("conexion.php");
 	  $date1 = date("Y-m-d", strtotime($_POST['date1']));
 	  if(is_null($date1)){
